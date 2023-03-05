@@ -5,21 +5,6 @@ import time
 import numpy as np
 import firebase_admin
 from firebase_admin import credentials, db
-
-from http.server import BaseHTTPRequestHandler
-from os.path import join
-
-class handler(BaseHTTPRequestHandler):
-
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type','text/plain')
-        self.end_headers()
-        with open(join('data', 'file.txt'), 'r') as file:
-          for line in file:
-            self.wfile.write(line.encode())
-        return
-
 app = Flask(__name__,template_folder='template')
 
 cred = credentials.Certificate("C:/Users/GAIKAR/Desktop/Desktop/smart switch board/smart-switch-board-60ec6-firebase-adminsdk-et2mj-e7df50efd1.json")
