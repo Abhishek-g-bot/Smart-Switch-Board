@@ -1,8 +1,6 @@
 from flask import Flask, render_template, Response
 import cv2
 from cvzone.HandTrackingModule import HandDetector
-import time
-import numpy as np
 import firebase_admin
 from firebase_admin import credentials, db
 app = Flask(__name__,template_folder='template')
