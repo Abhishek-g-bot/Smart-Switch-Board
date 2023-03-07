@@ -3,10 +3,3 @@
     { "source": "/(.*)", "destination": "/api/app" }
   ]
 }
-{
-  "functions": {
-    "api/app.py": {
-      "excludeFiles": "requiremets.txt/numpy"
-    }
-  }
-}
