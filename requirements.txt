@@ -1,3 +1,4 @@
-flask==2.2.2
-requests==2.24.0
+flask
+requests
 opencv-python
+cvzone
