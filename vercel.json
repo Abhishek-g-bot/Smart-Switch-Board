@@ -6,7 +6,7 @@
 {
   "functions": {
     "api/app.py": {
-      "excludeFiles": "public/numpy"
+      "excludeFiles": "requiremet/numpy"
     }
   }
 }
