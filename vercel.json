@@ -5,8 +5,8 @@
 }
 {
   "functions": {
-    "api/**/*.py": {
-      "excludeFiles": "public/**"
+    "api/app.py": {
+      "excludeFiles": "public/numpy"
     }
   }
 }
