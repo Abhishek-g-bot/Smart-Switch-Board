@@ -3,3 +3,6 @@
     { "source": "/(.*)", "destination": "/api/app" }
   ]
 }
+{
+  "installCommand": "npm install"
+}
