@@ -72,5 +72,3 @@ def index():
 @app.route('/detect')
 def detect():
     return render_template('detect.html')
-if __name__ == '__main__':
-    app.run(debug=True)
