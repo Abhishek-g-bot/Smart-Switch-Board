@@ -18,7 +18,7 @@ ref_led4 = db.reference('Led4Status')
 detector = HandDetector(maxHands=1, detectionCon=0.8)
 
 def gen_frames():
-    cap = cv2.VideoCapture(0)
+    cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
     while True:
         success, frame = cap.read()
         if not success:
