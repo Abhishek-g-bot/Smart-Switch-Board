@@ -1,7 +1,7 @@
+protobuf==3.19.6
 gunicorn==19.7.1
 flask
 opencv-python==4.7.0.72
 cvzone
-protobuf==3.19.6
 firebase-admin==6.1.0
 mediapipe
