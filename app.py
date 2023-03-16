@@ -5,7 +5,7 @@ import firebase_admin
 from firebase_admin import credentials, db
 app = Flask(__name__,template_folder='../template')
 
-cred = credentials.Certificate("../smart-switch-board-60ec6-firebase-adminsdk-et2mj-2cface1cba.json")
+cred = credentials.Certificate("smart-switch-board-60ec6-firebase-adminsdk-et2mj-2cface1cba.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://smart-switch-board-60ec6-default-rtdb.firebaseio.com/'
 })
