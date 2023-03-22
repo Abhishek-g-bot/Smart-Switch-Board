@@ -5,7 +5,7 @@ import firebase_admin
 from firebase_admin import credentials, db
 app = Flask(__name__,template_folder='template')
 
-cred = credentials.Certificate("firebase.json")
+cred = credentials.Certificate("smart-switch-board-60ec6-firebase-adminsdk-et2mj-e7df50efd1.json")
 firebase_admin.initialize_app(cred, {
     'databaseURL': 'https://smart-switch-board-60ec6-default-rtdb.firebaseio.com/'
 })
@@ -18,7 +18,7 @@ ref_led4 = db.reference('Led4Status')
 detector = HandDetector(maxHands=1, detectionCon=0.8)
 
 def gen_frames():
-    cap = cv2.VideoCapture(0,cv2.CAP_DSHOW)
+    cap = cv2.VideoCapture(0)
     while True:
         success, frame = cap.read()
         if not success:
