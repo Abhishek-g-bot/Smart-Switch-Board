@@ -53,11 +53,6 @@ def gen_frames():
                     #    ref_led2.set(False)
                     #    ref_led3.set(False)
                     #    ref_led4.set(False)
-        ret, buffer = cv2.imencode('.jpg', frame)
-        frame = buffer.tobytes()
-            
-        # yield the resulting frame as a response to the client
-    yield (b'--frame\r\n'b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
     
 
 @app.route('/video_feed')
