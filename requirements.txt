@@ -1,6 +1,5 @@
 gunicorn==19.7.1
 flask
-opencv-python
 cvzone
 firebase-admin
 mediapipe
