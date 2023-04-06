@@ -4,3 +4,4 @@ opencv-python
 cvzone
 firebase-admin
 mediapipe
+protobuf==3.19.6
