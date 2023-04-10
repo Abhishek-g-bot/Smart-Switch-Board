@@ -1,6 +1,5 @@
 gunicorn==19.7.1
 wheel
-pthon==3.8
 flask
 cvzone
 firebase-admin
