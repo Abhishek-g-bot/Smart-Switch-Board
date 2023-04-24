@@ -11,10 +11,10 @@ firebase_admin.initialize_app(cred, {
 })
 
 # Get a reference to the database nodes
-ref_led1 = db.reference('Led1Status')
-ref_led2 = db.reference('Led2Status')
-ref_led3 = db.reference('Led3Status')
-ref_led4 = db.reference('Led4Status')
+ref_Relay1 = db.reference('Relay1Status')
+ref_Relay2 = db.reference('Relay2Status')
+ref_Relay3 = db.reference('Relay3Status')
+ref_Relay4 = db.reference('Relay4Status')
 detector = HandDetector(maxHands=1, detectionCon=0.8)
 
 def gen_frames():
@@ -31,23 +31,23 @@ def gen_frames():
                 if lmlist:
                     fingerup = detector.fingersUp(lmlist)
                     if fingerup == [0, 0, 0, 0, 0]:
-                        ref_led1.set(0)
-                        ref_led2.set(0)
-                        ref_led3.set(0)
-                        ref_led4.set(0)
+                        ref_Relay1.set(0)
+                        ref_Relay2.set(0)
+                        ref_Relay3.set(0)
+                        ref_Relay4.set(0)
                     if fingerup == [0, 1, 0, 0, 0]:
-                        ref_led1.set(True)
+                        ref_Relay1.set(True)
                     if fingerup == [0, 1, 1, 0, 0]:
-                        ref_led2.set(True)
+                        ref_Relay2.set(True)
                     if fingerup == [0, 1, 1, 1, 0]:
-                        ref_led3.set(True)
+                        ref_Relay3.set(True)
                     if fingerup == [0, 1, 1, 1, 1]:
-                        ref_led4.set(True)
+                        ref_Relay4.set(True)
                     if fingerup == [1, 1, 1, 1, 1]:
-                        ref_led1.set(True)
-                        ref_led2.set(True)
-                        ref_led3.set(True)
-                        ref_led4.set(True)
+                        ref_Relay1.set(True)
+                        ref_Relay2.set(True)
+                        ref_Relay3.set(True)
+                        ref_Relay4.set(True)
                     #else:
                     #    ref_led1.set(False)
                     #    ref_led2.set(False)
