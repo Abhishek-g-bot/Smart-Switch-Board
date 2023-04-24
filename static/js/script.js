@@ -1,14 +1,14 @@
 // Your web app's Firebase configuration
 var firebaseConfig = {
-    apiKey: "AIzaSyCNUhtI_IWnm9FJyib9hW5P7fAYae9zyf4",
-    authDomain: "smart-switch-board-60ec6.firebaseapp.com",
-    databaseURL: "https://smart-switch-board-60ec6-default-rtdb.firebaseio.com",
-    projectId: "smart-switch-board-60ec6",
-    storageBucket: "smart-switch-board-60ec6.appspot.com",
-    messagingSenderId: "830949775695",
-    appId: "1:830949775695:web:87914343f6262b85e04d3a",
-    measurementId: "G-8EMNQ86YJ0"
-  };
+    apiKey: "AIzaSyAekx7jVs-uyVqoH7ZiU_lozoYEBAFvhmA",
+    authDomain: "smartswitchboard2022.firebaseapp.com",
+    databaseURL: "https://smartswitchboard2022-default-rtdb.firebaseio.com",
+    projectId: "smartswitchboard2022",
+    storageBucket: "smartswitchboard2022.appspot.com",
+    messagingSenderId: "684992482262",
+    appId: "1:684992482262:web:e3295940648ec613d27277",
+    measurementId: "G-W88GGR41VD"
+};
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
