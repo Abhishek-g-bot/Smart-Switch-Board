@@ -1,5 +1,4 @@
 gunicorn==19.7.1
-wheel
 flask
 cvzone
 firebase-admin
@@ -8,4 +7,3 @@ protobuf==3.19.6
 numpy==1.18.4
 opencv-python==4.4.0.46
 proglog==0.1.9
-cmake==3.18.2.post1
