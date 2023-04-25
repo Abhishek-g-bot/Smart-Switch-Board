@@ -5,5 +5,5 @@ firebase-admin
 mediapipe
 protobuf==3.19.6
 numpy==1.18.4
-opencv-python==4.4.0.46
+opencv-python
 proglog==0.1.9
