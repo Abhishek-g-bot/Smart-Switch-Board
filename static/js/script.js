@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyAekx7jVs-uyVqoH7ZiU_lozoYEBAFvhmA",
     authDomain: "smartswitchboard2022.firebaseapp.com",
@@ -9,9 +8,7 @@ var firebaseConfig = {
     appId: "1:684992482262:web:e3295940648ec613d27277",
     measurementId: "G-W88GGR41VD"
 };
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
 $(document).ready(function(){
 var database = firebase.database();
 var Relay1Status;
@@ -19,10 +16,10 @@ var Relay2Status;
 var Relay3Status;
 var Relay4Status;
 database.ref().on("value", function(snap){
-  Relay1Status = snap.val().Led1Status;
-  Relay2Status = snap.val().Led2Status;
-  Relay3Status = snap.val().Led3Status;
-  Relay4Status = snap.val().Led4Status;
+  Relay1Status = snap.val().Relay1Status;
+  Relay2Status = snap.val().Relay2Status;
+  Relay3Status = snap.val().Relay3Status;
+  Relay4Status = snap.val().Relay4Status;
   if(Relay1Status == "1"){
     document.getElementById("unact").style.display = "none";
     document.getElementById("act").style.display = "block";
