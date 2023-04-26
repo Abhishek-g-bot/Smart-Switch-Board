@@ -20,28 +20,28 @@ database.ref().on("value", function(snap){
   Relay2Status = snap.val().Relay2Status;
   Relay3Status = snap.val().Relay3Status;
   Relay4Status = snap.val().Relay4Status;
-  if(Relay1Status == "True"){
+  if(Relay1Status == "1"){
     document.getElementById("unact").style.display = "none";
     document.getElementById("act").style.display = "block";
   } else {
     document.getElementById("unact").style.display = "block";
     document.getElementById("act").style.display = "none";
   }
-  if(Relay2Status == "True"){
+  if(Relay2Status == "1"){
     document.getElementById("unact1").style.display = "none";
     document.getElementById("act1").style.display = "block";
   } else {
     document.getElementById("unact1").style.display = "block";
     document.getElementById("act1").style.display = "none";
   }
-  if(Relay3Status == "True"){
+  if(Relay3Status == "1"){
     document.getElementById("unact2").style.display = "none";
     document.getElementById("act2").style.display = "block";
   } else {
     document.getElementById("unact2").style.display = "block";
     document.getElementById("act2").style.display = "none";
   }
-  if(Relay4Status == "True"){
+  if(Relay4Status == "1"){
     document.getElementById("unact3").style.display = "none";
     document.getElementById("act3").style.display = "block";
   } else {
