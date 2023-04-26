@@ -1,47 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-        <title>Finger Count</title>
-  </head>
- <body>
-        <h1>Finger Count</h1>
-        <img src="{{ url_for('video_feed') }}" />
-        <h2>Left Hand: <span id="fingers1"></span></h2>
-        <h2>Right Hand: <span id="fingers2"></span></h2>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            function updateFingerCounts(fingers1, fingers2) {
-                $('#fingers1').text(fingers1);
-                $('#fingers2').text(fingers2);
-            }
-            setInterval(function() {
-                $.ajax({
-                    url: '{{ url_for('video_feed') }}',
-                    type: 'HEAD',
-                    error: function() {
-                        // Handle error
-                    },
-                    success: function() {
-                        // Video feed is still available, so update the finger counts
-                        $.ajax({
-                            url: '{{ url_for('video_feed') }}',
-                            cache: false,
-                            processData: false,
-                            type: 'GET',
-                            dataType: 'text',
-                            success: function(data) {
-                                var regex = /Left Hand: (\d+)\nRight Hand: (\d+)/g;
-                                var match = regex.exec(data);
-                                if (match) {
-                                    var fingers1 = match[1];
-                                    var fingers2 = match[2];
-                                    updateFingerCounts(fingers1, fingers2);
-                                }
-                            }
-                        });
-                    }
-                });
-            }, 1000);
-        </script>
-    </body>
+<meta charset="utf-8">
+<title>Display Webcam Stream</title>
+ 
+<style>
+#container {
+	margin: 0px auto;
+	width: 500px;
+	height: 375px;
+	border: 10px #333 solid;
+}
+#videoElement {
+	width: 500px;
+	height: 375px;
+	background-color: #666;
+}
+</style>
+</head>
+ 
+<body>
+<div id="container">
+	<video autoplay="true" id="videoElement">
+	
+	</video>
+</div>
+<script>
+var video = document.querySelector("#videoElement");
+
+if (navigator.mediaDevices.getUserMedia) {
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function (stream) {
+      video.srcObject = stream;
+    })
+    .catch(function (err0r) {
+      console.log("Something went wrong!");
+    });
+}
+</script>
+</body>
 </html>
