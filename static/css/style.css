@@ -18,7 +18,7 @@ body {
     align-items: center;
     flex-direction: column;
 }
-.toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3{
+.toggle-btn, .toggle-btn1, .toggle-btn2, .toggle-btn3, .toggle-btn4, .toggle-btn5, .toggle-btn6, .toggle-btn7{
 	width: 80px;
 	height: 40px;
 	background: gray;
@@ -26,7 +26,7 @@ body {
 	padding:5px;
 	transition: all 300ms ease-in-out;
 }
-.toggle-btn > .inner-circle, .toggle-btn1 > .inner-circle, .toggle-btn2 > .inner-circle, .toggle-btn3 > .inner-circle{
+.toggle-btn > .inner-circle, .toggle-btn1 > .inner-circle, .toggle-btn2 > .inner-circle, .toggle-btn3 > .inner-circle, .toggle-btn4 > .inner-circle, .toggle-btn5 > .inner-circle, .toggle-btn6 > .inner-circle, .toggle-btn7 > .inner-circle{
 	width: 40px;
 	height: 40px;
 	background: #fff;
@@ -56,7 +56,30 @@ body {
 	box-shadow: 0 0 10px #a3f321, 0 0 40px #a3f321, 0 0 80px #a3f321;
 	transition-delay: 0.5s;
 }
-.toggle-btn.active>.inner-circle,.toggle-btn1.active>.inner-circle,.toggle-btn2.active>.inner-circle,.toggle-btn3.active>.inner-circle{
+.toggle-btn4.active{
+	
+	background: #f32195;
+	box-shadow: 0 0 10px #f32195, 0 0 40px #f32195, 0 0 80px #f32195;
+	transition-delay: 0.5s;
+}
+.toggle-btn5.active{
+	
+	background: #7c21f3;
+	box-shadow: 0 0 10px #7c21f3, 0 0 40px #7c21f3, 0 0 80px #7c21f3;
+	transition-delay: 0.5s;
+}
+.toggle-btn6.active{
+	
+	background: #21f33d;
+	box-shadow: 0 0 10px #21f33d, 0 0 40px #21f33d, 0 0 80px #21f33d;
+	transition-delay: 0.5s;
+}
+.toggle-btn7.active{
+	background: #f38021;
+	box-shadow: 0 0 10px #f38021, 0 0 40px #f38021, 0 0 80px #f38021;
+	transition-delay: 0.5s;
+}
+.toggle-btn.active>.inner-circle,.toggle-btn1.active>.inner-circle,.toggle-btn2.active>.inner-circle,.toggle-btn3.active>.inner-circle,.toggle-btn4.active>.inner-circle,.toggle-btn5.active>.inner-circle,.toggle-btn6.active>.inner-circle,.toggle-btn7.active>.inner-circle{
 	margin-left: 40px;
 }
 .icon1{	
@@ -64,8 +87,8 @@ body {
 	margin: 10px auto;
 }
 #hand-gesture-button {
-  font-size: 16px;
-  background-color: #4CAF50;
+  font-size: 30px;
+  background-color: #ca2121;
   margin: 10px auto;
   color: white;
   border: none;
