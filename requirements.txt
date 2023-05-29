@@ -1,7 +1,4 @@
 gunicorn==19.7.1
 flask
 firebase-admin
-mediapipe
-protobuf==3.19.6
-numpy==1.18.4
 opencv-python
