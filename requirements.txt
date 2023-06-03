@@ -3,4 +3,4 @@ flask
 firebase-admin
 opencv-python
 mediapipe
-cvzoneS
+cvzone
