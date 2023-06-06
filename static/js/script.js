@@ -168,6 +168,7 @@ $(".toggle-btn7").click(function(){
 })
 
 document.getElementById('hand-gesture-button').addEventListener('click', function() {
+navigator.mediaDevices.getUserMedia({video: true})
 var xhr = new XMLHttpRequest();
 xhr.open('GET', '/video_feed', true);
 xhr.onload = function() {
